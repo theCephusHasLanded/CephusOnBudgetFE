@@ -1,4 +1,4 @@
-#CephusOnBudgetBE 💸
+# CephusOnBudgetFE 💸
 <!DOCTYPE html>
 <html>
   <head>
@@ -32,8 +32,8 @@
     <h6>This app was built with:</h6>
     <ul>
 <li>React.js</li>
-<li>HTML<li>
-<li>CSS<li>
+<li>HTML</li>
+<li>CSS</li>
 <li>JavaScript</li>
 </ul>
       <br/>
