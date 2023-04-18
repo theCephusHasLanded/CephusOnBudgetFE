@@ -1,9 +1,11 @@
-import NotFound from "../Components/NotFound"
+import { Link } from 'react-router-dom';
+import NotFound from '../Components/NotFound';
 
 const ErrorPage = () => {
-    return (
-      <div className="ErrorPage">
-        <div style={{ position: 'relative', paddingBottom: 'calc(56.25% + 44px)' }}>
+  return (
+    <div className="ErrorPage">
+      <div style={{ position: 'relative', paddingBottom: 'calc(56.25% + 44px)' }}>
+        <Link to="/">
           <iframe
             src='https://gfycat.com/ifr/InfiniteDopeyGoa'
             title='404 Not Found'
@@ -12,14 +14,14 @@ const ErrorPage = () => {
             style={{ position: 'absolute', top: 0, left: 0 }}
             allowFullScreen
           />
-        </div>
-        <p>
-          <a href='/'>Back to Home</a>
-        </p>
-        <NotFound />
+        </Link>
       </div>
-    );
-  };
-  
-  export default ErrorPage;
-  
+      <p>
+        <Link to="/">Back to Home</Link>
+      </p>
+      <NotFound />
+    </div>
+  );
+};
+
+export default ErrorPage;
