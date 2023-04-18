@@ -10,10 +10,22 @@ const TransactionShow = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get(`${API}/transactions/${id}`)
-      .then(response => setTransaction(response.data))
-      .catch(error => navigate("/NotFound")); // Navigate to a 404 page if the transaction isn't found
+    axios
+      .get(`${API}/transactions/${id}`)
+      .then((response) => setTransaction(response.data))
+      .catch((error) => navigate("/404"));
   }, [id, navigate]);
+
+  const handleDelete = () => {
+    axios
+      .delete(`${API}/transactions/${id}`)
+      .then((response) => {
+        navigate("/transactions");
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
 
   if (!transaction) {
     return <div>Loading...</div>;
@@ -22,10 +34,19 @@ const TransactionShow = () => {
   return (
     <div>
       <h2>Transaction Details</h2>
-      <p><strong>ID:</strong> {transaction.id}</p>
-      <p><strong>Description:</strong> {transaction.description}</p>
-      <p><strong>Amount:</strong> {transaction.amount}</p>
-      <p><Link to={`/transactions/${transaction.id}/edit`}>Edit</Link></p>
+      <p>
+        <strong>ID:</strong> {transaction.id}
+      </p>
+      <p>
+        <strong>Description:</strong> {transaction.description}
+      </p>
+      <p>
+        <strong>Amount:</strong> {transaction.amount}
+      </p>
+      <p>
+        <Link to={`/transactions/${transaction.id}/edit`}>Edit</Link>{" "}
+        <button onClick={handleDelete}>Delete</button>
+      </p>
     </div>
   );
 };

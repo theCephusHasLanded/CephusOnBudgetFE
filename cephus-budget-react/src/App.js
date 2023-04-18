@@ -2,12 +2,12 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // PAGES
-import Home from "./Pages/Home";
-import TransactionList from "./Pages/TransactionList";
-import TransactionNew from "./Pages/TransactionNew";
-import TransactionShow from "./Pages/TransactionShow";
-import TransactionEdit from "./Pages/TransactionEdit";
-import NotFound from "./Pages/NotFound";
+import Home from "./Pages/HomePage";
+import TransactionList from "./Pages/ListPage";
+import TransactionNew from "./Pages/NewPage";
+import TransactionShow from "./Pages/ShowPage";
+import TransactionEdit from "./Pages/EditPage";
+import NotFound from "./Pages/ErrorPage";
 
 // COMPONENTS
 import NavBar from "./Components/NavBar";
