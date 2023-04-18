@@ -3,11 +3,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // PAGES
 import Home from "./Pages/HomePage";
-import TransactionList from "./Pages/ListPage";
-import TransactionNew from "./Pages/NewPage";
-import TransactionShow from "./Pages/ShowPage";
-import TransactionEdit from "./Pages/EditPage";
-import NotFound from "./Pages/ErrorPage";
+import TransactionList from "./Components/TransactionList";
+import TransactionNew from "./Components/TransactionNew";
+import TransactionShow from "./Components/TransactionShow";
+import TransactionEdit from "./Components/TransactionEdit";
+import NotFound from "./Components/NotFound";
 
 // COMPONENTS
 import NavBar from "./Components/NavBar";
@@ -18,7 +18,7 @@ return (
     
 <Router>
 <NavBar />
-<main>
+{/* <main> */}
 <Routes>
 <Route path="/" element={<Home />} />
 <Route path="/transactions" element={<TransactionList />} />
@@ -27,7 +27,7 @@ return (
 <Route path="/transactions/:id/edit" element={<TransactionEdit />} />
 <Route path="*" element={<NotFound />} />
 </Routes>
-</main>
+{/* </main> */}
 </Router>
 </div>
 );
