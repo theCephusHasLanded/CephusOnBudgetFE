@@ -7,7 +7,8 @@
   <body>
     <h1>Budgeting App Frontend</h1>
     <p>
-      <h5>Check Out my TrelloBoard! <a href="https://trello.com/b/OBnA2i5a/budget-app-template"</a></h5>
+      <h5>Check Out my TrelloBoard! <a href="https://trello.com/b/OBnA2i5a/budget-app-template"</a>.</h5>
+    </p>
     <p>
       This is the frontend for a budgeting app, built with
       <h3><a href="https://reactjs.org/">React.js</a></h3>
