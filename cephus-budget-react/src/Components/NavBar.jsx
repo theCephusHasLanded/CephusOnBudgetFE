@@ -24,18 +24,6 @@ const NavBar = () => {
             </Button>
           </Nav.Link>
         </Nav>
-        <Nav>
-          <Nav.Link>
-            <Button variant="primary" href="#login">
-              Login
-            </Button>
-          </Nav.Link>
-          <Nav.Link>
-            <Button variant="outline-secondary" href="#signup">
-              Sign up
-            </Button>
-          </Nav.Link>
-        </Nav>
       </Navbar.Collapse>
     </Navbar>
   );

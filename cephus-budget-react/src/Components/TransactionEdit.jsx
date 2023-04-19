@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
+import { Container, Form, Button } from "react-bootstrap";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -53,36 +54,38 @@ const TransactionEdit = () => {
   };
 
   return (
-    <div>
-      <h2>Edit Transaction</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="itemName">Item Name:</label>
-          <input type="text" id="itemName" value={itemName} onChange={(e) => setItemName(e.target.value)} />
-        </div>
-        <div>
-          <label htmlFor="amount">Amount:</label>
-          <input type="number" id="amount" value={amount} onChange={(e) => setAmount(e.target.value)} />
-        </div>
-        <div>
-          <label htmlFor="date">Date:</label>
-          <input type="text" id="date" value={date} onChange={(e) => setDate(e.target.value)} />
-        </div>
-        <div>
-          <label htmlFor="from">From:</label>
-          <input type="text" id="from" value={from} onChange={(e) => setFrom(e.target.value)} />
-        </div>
-        <div>
-          <label htmlFor="category">Category:</label>
-          <input type="text" id="category" value={category} onChange={(e) => setCategory(e.target.value)} />
-        </div>
-        <div>
-          <label htmlFor="deposit">Deposit:</label>
-          <input type="text" id="deposit" value={deposit} onChange={(e) => setDeposit(e.target.value)} />
-        </div>
-        <button type="submit">💾</button>
-      </form>
-    </div>
+    <Container className="d-flex justify-content-center">
+      <div>
+        <h2>Edit Transaction</h2>
+        <Form onSubmit={handleSubmit}>
+          <Form.Group controlId="itemName">
+            <Form.Label>Item Name:</Form.Label>
+            <Form.Control type="text" value={itemName} onChange={(e) => setItemName(e.target.value)} />
+          </Form.Group>
+          <Form.Group controlId="amount">
+            <Form.Label>Amount:</Form.Label>
+            <Form.Control type="number" value={amount} onChange={(e) => setAmount(e.target.value)} />
+          </Form.Group>
+          <Form.Group controlId="date">
+            <Form.Label>Date:</Form.Label>
+            <Form.Control type="text" value={date} onChange={(e) => setDate(e.target.value)} />
+          </Form.Group>
+          <Form.Group controlId="from">
+            <Form.Label>From:</Form.Label>
+            <Form.Control type="text" value={from} onChange={(e) => setFrom(e.target.value)} />
+          </Form.Group>
+          <Form.Group controlId="category">
+            <Form.Label>Category:</Form.Label>
+            <Form.Control type="text" value={category} onChange={(e) => setCategory(e.target.value)} />
+          </Form.Group>
+          <Form.Group controlId="deposit">
+            <Form.Label>Deposit:</Form.Label>
+            <Form.Control type="text" value={deposit} onChange={(e) => setDeposit(e.target.value)} />
+          </Form.Group>
+          <Button variant="primary" type="submit">💾</Button>
+        </Form>
+      </div>
+    </Container>
   );
 };
 

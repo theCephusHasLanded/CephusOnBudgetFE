@@ -1,6 +1,8 @@
 import axios from "axios";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { Table } from "react-bootstrap";
+import 'bootstrap/dist/css/bootstrap.css';
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -31,18 +33,49 @@ const TransactionShow = () => {
     return <div>Loading...</div>;
   }
 
+  const depositIcon = (isDeposit) => {
+    return isDeposit ? "✔️" : "❌";
+  };
+
   return (
     <div>
       <h1>Transaction Details</h1>
-      <p>
-        <strong>ID:</strong> {transaction.id}
-      </p>
-      <p>
-        <strong>Description:</strong> {transaction.description}
-      </p>
-      <p>
-        <strong>Amount:</strong> {transaction.amount}
-      </p>
+      <Table striped bordered hover>
+        <tbody>
+          <tr>
+            <td>ID:</td>
+            <td>{transaction.id}</td>
+          </tr>
+          <tr>
+            <td>Item Name:</td>
+            <td>{transaction.item_name}</td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>{transaction.description}</td>
+          </tr>
+          <tr>
+            <td>Amount:</td>
+            <td>{transaction.amount}</td>
+          </tr>
+          <tr>
+            <td>Date:</td>
+            <td>{transaction.date}</td>
+          </tr>
+          <tr>
+            <td>From:</td>
+            <td>{transaction.from}</td>
+          </tr>
+          <tr>
+            <td>Category:</td>
+            <td>{transaction.category}</td>
+          </tr>
+          <tr>
+            <td>Deposit:</td>
+            <td>{depositIcon(transaction.deposit)}</td>
+          </tr>
+        </tbody>
+      </Table>
       <p>
         <Link to={`/transactions/${transaction.id}/edit`}><button>Edit</button></Link>{" "}
         <button onClick={handleDelete}>Delete</button>
