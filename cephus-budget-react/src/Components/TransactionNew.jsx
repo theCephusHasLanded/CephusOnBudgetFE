@@ -64,7 +64,7 @@ const TransactionNew = () => {
           <label htmlFor="deposit">Deposit:</label>
           <input type="checkbox" id="deposit" name="deposit" checked={transaction.deposit} onChange={handleInputChange} />
         </div>
-        <button type="submit">Save</button>
+        <button type="submit">💾</button>
       </form>
     </div>
   );

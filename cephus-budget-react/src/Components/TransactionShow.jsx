@@ -44,7 +44,7 @@ const TransactionShow = () => {
         <strong>Amount:</strong> {transaction.amount}
       </p>
       <p>
-        <Link to={`/transactions/${transaction.id}/edit`}>Edit</Link>{" "}
+        <Link to={`/transactions/${transaction.id}/edit`}><button>Edit</button></Link>{" "}
         <button onClick={handleDelete}>Delete</button>
       </p>
     </div>
