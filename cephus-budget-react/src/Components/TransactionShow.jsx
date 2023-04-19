@@ -3,6 +3,7 @@ import { Link, useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.css';
+import { v4 as uuidv4 } from 'uuid';
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -44,7 +45,7 @@ const TransactionShow = () => {
         <tbody>
           <tr>
             <td>ID:</td>
-            <td>{transaction.id}</td>
+            <td>{transaction.id || uuidv4()}</td>
           </tr>
           <tr>
             <td>Item Name:</td>

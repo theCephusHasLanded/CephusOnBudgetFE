@@ -2,17 +2,19 @@ import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Form, Button, Container } from "react-bootstrap";
+import { v4 as uuidv4 } from 'uuid';
 
 const API = process.env.REACT_APP_API_URL;
 
 const TransactionNew = () => {
   const [transaction, setTransaction] = useState({
+    id: uuidv4(), // generate a unique ID
     item_name: "",
     amount: "",
     date: "",
     from: "",
     category: "",
-    deposit: "",
+    deposit: false, // set default value for deposit to false
   });
 
   const navigate = useNavigate();
@@ -22,6 +24,14 @@ const TransactionNew = () => {
     setTransaction((prevState) => ({
       ...prevState,
       [name]: value,
+    }));
+  };
+
+  const handleCheckboxChange = (event) => {
+    const { name, checked } = event.target;
+    setTransaction((prevState) => ({
+      ...prevState,
+      [name]: checked,
     }));
   };
 
@@ -93,7 +103,7 @@ const TransactionNew = () => {
               type="checkbox"
               name="deposit"
               checked={transaction.deposit}
-              onChange={handleInputChange}
+              onChange={handleCheckboxChange}
               label="Deposit"
             />
           </Form.Group>
