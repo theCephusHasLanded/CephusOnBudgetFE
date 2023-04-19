@@ -1,4 +1,6 @@
 import React from 'react';
+import { Container, Button } from 'react-bootstrap';
+import gif404 from '../404assets/404.gif';
 
 const NotFound = () => {
   const handleGoBack = () => {
@@ -12,10 +14,10 @@ const NotFound = () => {
   };
 
   return (
-    <div>
-      <h1>OOPS!</h1>
-      <button onClick={showError}>Regresa a Casa? 🏡</button>
-    </div>
+    <Container className="d-flex flex-column justify-content-center align-items-center vh-100">
+      <img src={gif404} alt="404 error" />
+      <Button variant="primary" onClick={showError}>Regresa a Casa? 🏡</Button>
+    </Container>
   );
 };
 
