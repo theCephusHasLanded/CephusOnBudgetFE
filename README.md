@@ -7,7 +7,7 @@
   <body>
     <h1>Budgeting App Frontend</h1>
     <p>
-      <h5><a href="https://trello.com/b/OBnA2i5a/budget-app-template"</a>Check Out my TrelloBoard! </h5>
+      <h5><a href="https://trello.com/b/OBnA2i5a/budget-app-template">Check out my Trello!</a></h5>
     </p>
     <p>
       This is the frontend for a budgeting app, built with
