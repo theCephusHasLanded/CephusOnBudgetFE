@@ -33,7 +33,7 @@ const TransactionShow = () => {
 
   return (
     <div>
-      <h2>Transaction Details</h2>
+      <h1>Transaction Details</h1>
       <p>
         <strong>ID:</strong> {transaction.id}
       </p>
