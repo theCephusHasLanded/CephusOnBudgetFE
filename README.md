@@ -13,6 +13,20 @@
       This is the frontend for a budgeting app, built with
       <h3><a href="https://reactjs.org/">React.js</a></h3>
     </p>
+    
+  <img width="500" alt="Screenshot 2023-04-19 at 6 38 33 PM" src="https://user-images.githubusercontent.com/113807743/233215941-5fb5fd21-bd1c-4f2b-8b23-76c79f53a64f.png">
+
+<img width="500" alt="Screenshot 2023-04-19 at 6 38 02 PM" src="https://user-images.githubusercontent.com/113807743/233215971-1141d6d2-6cc5-46c3-a5ee-c6e9e94fe18e.png">
+
+<img width="500" alt="Screenshot 2023-04-19 at 6 37 56 PM" src="https://user-images.githubusercontent.com/113807743/233215989-98a40c2c-b8b7-436a-94e4-88beb13a54b0.png">
+
+<img width="500" alt="Screenshot 2023-04-19 at 6 37 49 PM" src="https://user-images.githubusercontent.com/113807743/233216005-f0b9b69d-6953-41e0-b36f-a04a1081b65e.png">
+
+    
+    
+    
+    
+    
     <h2>Getting Started</h2>
     <p>
       <li>Clone this repository to your local machine.</li>
