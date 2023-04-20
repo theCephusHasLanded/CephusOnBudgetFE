@@ -14,20 +14,16 @@
       <h3><a href="https://reactjs.org/">React.js</a></h3>
     </p>
     
-  <img width="500" alt="FE-View-1" src="https://user-images.githubusercontent.com/113807743/233215941-5fb5fd21-bd1c-4f2b-8b23-76c79f53a64f.png">
+<img width="500" alt="FE-View-1" src="https://user-images.githubusercontent.com/113807743/233215941-5fb5fd21-bd1c-4f2b-8b23-76c79f53a64f.png">
 
 <img width="500" alt="FE-View-2" src="https://user-images.githubusercontent.com/113807743/233215971-1141d6d2-6cc5-46c3-a5ee-c6e9e94fe18e.png">
 
 <img width="500" alt="FE-View-3" src="https://user-images.githubusercontent.com/113807743/233215989-98a40c2c-b8b7-436a-94e4-88beb13a54b0.png">
 
 <img width="500" alt="FE-View-4" src="https://user-images.githubusercontent.com/113807743/233216005-f0b9b69d-6953-41e0-b36f-a04a1081b65e.png">
-
-    
-    
-    
-    
-    
+<p>
     <h2>Getting Started</h2>
+</p>
     <p>
       <li>Clone this repository to your local machine.</li>
       <br />
